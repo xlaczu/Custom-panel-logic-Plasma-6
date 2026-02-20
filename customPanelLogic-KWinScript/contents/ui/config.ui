@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CustomPanelLogicConfig</class>
+ <widget class="QWidget" name="CustomPanelLogicConfig">
+  <layout class="QVBoxLayout" name="verticalLayout">
+   
+   <item>
+    <widget class="QLabel" name="instructionsLabel">
+     <property name="text">
+      <string>Enter your custom rules below. One rule per line.
+
+Rule format: mode, target panel position, "panel on screen", target panel sreen ID, "when", triger panel position, "panel on screen", triger panel screen ID, state 
+
+Example: dodgewindows top panel on screen 1 when top panel on screen 0 hidden</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+
+   <item>
+    <widget class="QLabel" name="instructionsLabel">
+     <property name="text">
+      <string>Avaible modes: "autohide", "dodgewindows", "none"(always show), "windowsgobelow"
+Avaible states: "visible", "hidden"
+Panel Screen ID is a Visual ID. Monitors are numbered from left to right and from top to bottom.
+
+Due to KWin limitations, manually opened panels are not registered.
+
+Note: Due to a bug in KWin, to apply configuration changes, the script has to be disabled and re-enabled
+      </string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+
+   <item>
+    <widget class="QLabel" name="label_CustomLogic">
+     <property name="text">
+      <string>Custom Rules:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPlainTextEdit" name="kcfg_CustomLogic">
+     <property name="toolTip">
+      <string>List your rules here.</string>
+     </property>
+    </widget>
+   </item>
+
+   <item>
+    <widget class="QLabel" name="instructionsLabel">
+     <property name="text">
+      <string>
+The interval in MS at which the script will check for changes in panel states. I Recomend 100. Wouldn't advise going below 50
+      </string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="label_TimerInterval">
+       <property name="text">
+        <string>Check Interval (ms):</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSpinBox" name="kcfg_TimerInterval">
+       <property name="minimum">
+        <number>10</number>
+       </property>
+       <property name="maximum">
+        <number>5000</number>
+       </property>
+       <property name="value"> 
+        <number>100</number>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,15 @@
+{
+    "KPlugin": {
+        "Name": "Custom Panel Logic",
+        "Description": "Shows only one top panel at a time when multiscreaning",
+        "Icon": "preferences-system-windows",
+        "Authors": [{"Name": "Xlaczu"}, {"Email": "kubatro2006kaja@gmail.com"}],
+        "Id": "xlaczu.customPanelLogic",
+        "Version": "1.0",
+        "License": "GPLv3"
+    },
+    "X-Plasma-API": "javascript",
+    "X-Plasma-MainScript": "code/main.js",
+    "KPackageStructure": "KWin/Script",
+    "X-KDE-ConfigModule": "kwin/effects/configs/kcm_kwin4_genericscripted"
+}
